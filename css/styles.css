@@ -8,6 +8,7 @@
    --footer-bg-color: #2f303a;
    --icons-color: #afb1b8;
    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   --duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* BASE STYLES */
@@ -116,7 +117,7 @@ img {
 }
 
 .site-nav .link {
-	display: block;
+   display: block;
 
    padding-top: 32px;
    padding-bottom: 31px;
@@ -127,7 +128,7 @@ img {
    line-height: 1.14;
    letter-spacing: 0.02em;
 
-   transition: color 250ms var(--timing-function);
+   transition: color var(--duration-timing);
 }
 
 .site-nav .link:hover,
@@ -175,7 +176,7 @@ img {
    line-height: 1.14;
    letter-spacing: 0.02em;
 
-   transition: color 250ms var(--timing-function);
+   transition: color var(--duration-timing);
 }
 
 .contacts-list .link:hover,
@@ -246,8 +247,8 @@ img {
    line-height: 1.88;
    letter-spacing: 0.06em;
 
-   transition: background-color 250ms var(--timing-function),
-      box-shadow 250ms var(--timing-function);
+   transition: background-color var(--duration-timing),
+      box-shadow var(--duration-timing);
 }
 
 .hero-button:hover,
@@ -266,8 +267,9 @@ img {
 
    background-color: rgba(0, 0, 0, 0.2);
    opacity: 1;
-	
-   transition: background-color 250ms var(--timing-function), opacity 250ms var(--timing-function);
+
+   transition: background-color var(--duration-timing),
+      opacity var(--duration-timing);
 }
 
 .backdrop.is-hidden {
@@ -284,7 +286,7 @@ img {
 
    min-width: 528px;
    min-height: 581px;
-	border-radius: 4px;
+   border-radius: 4px;
 
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -293,16 +295,14 @@ img {
    opacity: 1;
 
    transform: translate(-50%, -50%) scale(1);
-   transition: transform 250ms var(--timing-function),
-      opacity 250ms var(--timing-function);
+   transition: transform var(--duration-timing), opacity var(--duration-timing);
 }
 
 .backdrop.is-hidden .modal {
    opacity: 0;
 
    transform: translate(-50%, -50%) scale(0.9);
-   transition: transform 250ms var(--timing-function),
-      opacity 250ms var(--timing-function);
+   transition: transform var(--duration-timing), opacity var(--duration-timing);
 }
 
 .close-modal {
@@ -318,14 +318,14 @@ img {
    height: 30px;
    border-radius: 50%;
    border: 1px solid rgba(0, 0, 0, 0.1);
-	
+
    background-color: #fff;
 }
 
 .icon-close {
    fill: #000;
 
-   transition: fill 250ms var(--timing-function);
+   transition: fill var(--duration-timing);
 }
 
 .icon-close:hover {
@@ -417,25 +417,25 @@ img {
 }
 
 .item {
-	position: relative;
+   position: relative;
 }
 
 .example-text {
-	position: absolute;
-	bottom: 0;
+   position: absolute;
+   bottom: 0;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-	width: 100%;
-	height: 70px;
+   width: 100%;
+   height: 70px;
 
    font-weight: 700;
    text-transform: uppercase;
 
-	color: var(--primary-white-color);
-	background-color: rgba(47, 48, 58, 0.8);;
+   color: var(--primary-white-color);
+   background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* TEAM */
@@ -496,7 +496,7 @@ img {
    height: 100%;
    border-radius: 50%;
 
-   transition: background-color 250ms var(--timing-function);
+   transition: background-color var(--duration-timing);
 }
 
 .social-link:hover,
@@ -508,7 +508,7 @@ img {
 .social-icon {
    fill: var(--icons-color);
 
-   transition: fill 250ms var(--timing-function);
+   transition: fill var(--duration-timing);
 }
 
 .social-link:hover .social-icon,
@@ -535,7 +535,7 @@ img {
    border: 1px solid var(--icons-color);
    border-radius: 4px;
 
-   transition: border-color 250ms var(--timing-function);
+   transition: border-color var(--duration-timing);
 }
 
 .client-link:hover,
@@ -547,7 +547,7 @@ img {
 .client-icon {
    fill: var(--icons-color);
 
-   transition: fill 250ms var(--timing-function);
+   transition: fill var(--duration-timing);
 }
 
 .client-link:hover .client-icon,
@@ -591,7 +591,7 @@ img {
    line-height: 1.71;
    font-style: normal;
 
-   transition: color 250ms var(--timing-function);
+   transition: color var(--duration-timing);
 }
 
 .contacts-list-foot .link:hover,
@@ -602,7 +602,7 @@ img {
 .contacts-list-foot .item:first-child .link {
    color: var(--primary-white-color);
 
-   transition: color 250ms var(--timing-function);
+   transition: color var(--duration-timing);
 }
 
 .contacts-list-foot .item:first-child .link:hover,
@@ -622,7 +622,7 @@ img {
 .footer-block .social-link {
    background-color: rgba(255, 255, 255, 0.1);
 
-   transition: background-color 250ms var(--timing-function);
+   transition: background-color var(--duration-timing);
 }
 
 .footer-block .social-link:hover,
@@ -658,9 +658,8 @@ img {
    font-size: 16px;
    line-height: 1.62;
 
-   transition: box-shadow 250ms var(--timing-function),
-      color 250ms var(--timing-function),
-      background-color 250ms var(--timing-function);
+   transition: box-shadow var(--duration-timing), color var(--duration-timing),
+      background-color var(--duration-timing);
 }
 
 .filters-list .btn:hover,
@@ -681,7 +680,7 @@ img {
 .projects-list .item {
    width: calc((100% - 30px * 2) / 3);
 
-   transition: box-shadow 250ms var(--timing-function);
+   transition: box-shadow var(--duration-timing);
 }
 
 .projects-list .item:hover {
@@ -690,7 +689,7 @@ img {
 }
 
 .projects-list .link {
-   transition: box-shadow 250ms var(--timing-function);
+   transition: box-shadow var(--duration-timing);
 }
 
 .projects-list .link:focus {
@@ -723,34 +722,38 @@ img {
 }
 
 .thumb {
-	position: relative;
+   position: relative;
    overflow: hidden;
 }
 
 .thumb-text {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+   position: absolute;
+   bottom: 0;
+   right: 0;
 
-	padding: 63px 24px;
+   padding: 63px 24px;
 
-	width: 100%;
-	height: 100%;
+   width: 100%;
+   height: 100%;
 
-	color: var(--primary-white-color);
-	background-color: rgba(33, 150, 243, 0.9);
+   color: var(--primary-white-color);
+   background-color: rgba(33, 150, 243, 0.9);
 
-	line-height: 1.56;
-	font-size: 18px;
-	
-	transform: translateY(100%);
-	transition: transform 250ms var(--timing-function), visibility 250ms var(--timing-function);
+   line-height: 1.56;
+   font-size: 18px;
 
-	visibility: hidden;
+   visibility: hidden;
+
+   transform: translateY(100%);
+   transition: transform 500ms var(--timing-function),
+      visibility 500ms var(--timing-function);
 }
 
 .projects-list .item:hover .thumb-text {
-	transform: translateY(0);
+   transform: translateY(0);
 
-	visibility: visible;
+   visibility: visible;
+
+   transition: transform 500ms var(--timing-function),
+      visibility 500ms var(--timing-function);
 }
