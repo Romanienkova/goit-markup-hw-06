@@ -437,10 +437,14 @@ img {
 	height: 15px;
 	border-radius: 2px;
 	border: 2px solid var(--title-text-color);
+
+	transition: background-color var(--duration-timing);
 }
 
 .icon-check {
 	fill: transparent;
+
+	transition: fill var(--duration-timing);
 }
 
 .checkbox:checked + .check-span {
