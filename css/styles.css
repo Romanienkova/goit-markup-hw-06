@@ -455,6 +455,10 @@ img {
 	background-origin: border-box;
 }
 
+.checkbox:focus + .check-span {
+	border-color: var(--accent-color);
+}
+
 .checkbox:checked + .check-span > .icon-check {
 	fill: var(--primary-white-color);
 }
